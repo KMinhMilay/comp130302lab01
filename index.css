@@ -1,0 +1,178 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white ;
+    box-sizing: border-box;
+    background-image: url(src_media/img/fantasy-art-wlop-ghost-blade-wallpaper-thumb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+span,li{
+    font-size: 18px;
+    font-weight: bold;
+    color:  #1E1E1E;
+    
+}
+ul{
+    margin-top: -10px;
+}
+h2,ul {
+    font-size: 20px;
+    font-weight: bold;
+    color:  #5F3C24;
+}
+img{
+    object-fit: contain;
+
+}
+
+#container{
+    height: 650px;
+    width: 700px;
+    background: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 40px;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 10px 10px 12px gray;
+    
+}
+.container-avatar,.container-info,.container-language,.container-subject,.container-contact{
+    
+    margin:0;
+    border-radius: 30px;
+    border: 3px solid black;
+    /* box-shadow: 12px 4px 12px gray; */
+}
+.avatar-img{
+    position: absolute;
+    top:10px;
+    left:50%;
+    transform: translateX(-50%);
+    background: 
+        linear-gradient(#ccc 0 0) padding-box, 
+        linear-gradient(to right, #9c20aa, orange) border-box;
+    border: 6px solid transparent;
+    overflow: hidden;
+    border-radius: 100px;
+    
+    
+}
+.avatar-nickname{
+    font-size: 20px;
+    font-weight: bold;
+    color:  #5F3C24;
+    padding: 10px;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container-avatar{
+    padding: 0px 20px 20px 20px;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    flex:1 1 100px;
+    margin-right: 30px;
+}
+.container-info{
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    display: inline-block;
+    
+    text-align:left;
+    width: fit-content;
+    height: 200px;
+    flex:2 1 300px
+}
+.container-language{
+    padding: 0px 20px 20px 20px;
+    display: inline-block;
+    
+    text-align:left;
+    width: fit-content;
+    height: 150px;
+    flex:1 1 500px;
+}
+.container-subject{
+    padding: 0px 20px 20px 20px;
+    display: inline-block;
+    /* overflow: hidden ; */
+    text-align:left;
+    width: fit-content;
+    height: fit-content;
+    flex:1 1 150px;
+    margin-right: 30px;
+}
+.container-contact{
+    padding: 0px 20px 20px 20px;
+    display: inline-block;
+    
+    text-align:left;
+    width: fit-content;
+    height: 150px;
+    flex:2 1 150px;
+    
+}
+.container-contact-icon{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap;
+}
+/* img:hover  {
+    
+    transform:translate(5px,4px);
+    transition: all 0.5s;
+} */
+
+@media only screen and (max-width: 700px){
+    /* body{
+        overflow-y: auto;
+    } */
+    .avatar-img{
+        width: 90px;
+        left:55px;
+    }
+    #container{
+        /* max-height: max-content; */
+        overflow-y: auto;
+        flex-direction: row;
+        
+    }
+    .container-avatar{
+        margin:0;
+        height: 100px;
+        
+    }
+    .container-subject{
+        margin:0;
+    }
+    .avatar-nickname{
+        
+        right:0;
+        bottom: 50%;
+        transform: translateY(50%);
+        /* text-align: center; */
+        
+    }
+    .container-language{
+        height: fit-content;
+    }
+    .container-contact{
+        height: fit-content;
+        
+    }
+}
